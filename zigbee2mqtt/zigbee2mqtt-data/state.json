@@ -1,0 +1,18 @@
+{
+    "0xf84477fffe9ce83b": {
+        "color_mode": "xy",
+        "brightness": 254,
+        "state": "ON",
+        "color_temp": 158,
+        "update": {
+            "state": "idle",
+            "installed_version": 537029168,
+            "latest_version": 537029168
+        },
+        "update_available": false,
+        "color": {
+            "x": 0.6942,
+            "y": 0.2963
+        }
+    }
+}
