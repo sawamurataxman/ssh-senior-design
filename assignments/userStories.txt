@@ -1,0 +1,29 @@
+1. Frontend: Implement a React website which will form the basis of our frontend. For a basic implementation, the website should have a taskbar
+             at the top which users can click to view different pages. Make this bar expandable so we can create a new page when we add a new device.
+
+2. Frontend: Create a page for the smartbulb. This page should contain text boxes and dropdown menus that allow the user to set the values of the bulb.
+             A full list of fields for the bulb can be found here: https://www.zigbee2mqtt.io/devices/AE_280_C.html#exposes
+
+3. Frontend: Convert the user's inputs on the page created in story 2 into a usable JSON format and post it to a subdomain on the website
+             (localhost:<port>/api/<device_name>). When visiting this subdomain from the browser, it should look like black plaintext on a white background.
+             This will form the basis of communication between the frontend and backend.
+
+4. Frontend: When the user visits the bulb's page, the current configuration needs to populate with the bulb's current settings. This data can be
+             pulled from the backend, similar to the way the frontend sends data to the backend (FLASK topics, more info in backend stories)
+
+5. Backend: Implement a FLASK GET to pull JSON from the api page on the frontend.
+
+6. Backend: Create a means to take JSON data pulled in story 5 and send it to the corresponding device so its configuratin matches it identically.
+
+7. Backend: Implement a loop such that the backend is checking the api pages for changes. Make it user-configurable through a #define variable at the top of the
+            python file.
+
+8. Frontend/backend: Create a scheduling system so certain settings can be used at certain times of day. (ex. turn the light on at 8am, turn it off at 10pm)
+                     Users should be able to choose manual settings or a schedule, and have it configurable on the frontend. This should not expand the JSON,
+                     instead the frontend should update what JSON is on the API page at that time, and the backend simply checks for updates on some short interval.
+                     (This may not be the best way to go about this, and this will certainly be the hardest thing we do)
+
+9. Test mobile browser usage. Does it work as is, or is some design consideration needed? Decide if a mobile site version warrants creation.
+
+10. Decide on a comprehensive list of devices to implement in the future. Some ideas: Smart button that interlinks with bulb for a smart doorbell,
+    a smart thermostat, 
