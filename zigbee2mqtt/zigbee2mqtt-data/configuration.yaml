@@ -31,4 +31,6 @@ device_options:
   legacy: false
 devices:
   '0xf84477fffe9ce83b':
-    friendly_name: '0xf84477fffe9ce83b'
+    friendly_name: bulb1
+  '0xf84477fffe9ceec3':
+    friendly_name: '0xf84477fffe9ceec3'
