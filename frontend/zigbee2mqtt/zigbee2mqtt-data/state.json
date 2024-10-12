@@ -1,0 +1,36 @@
+{
+    "0xf84477fffe9ce83b": {
+        "color_mode": "color_temp",
+        "brightness": 0,
+        "state": "OFF",
+        "color_temp": 370,
+        "update": {
+            "state": "idle",
+            "installed_version": 537029168,
+            "latest_version": 537029168
+        },
+        "update_available": false,
+        "color": {
+            "x": 0.4599,
+            "y": 0.4106,
+            "hue": 32,
+            "saturation": 82
+        },
+        "color_temp_startup": 370,
+        "power_on_behavior": "on"
+    },
+    "0xf84477fffe9ceec3": {
+        "color_mode": "color_temp",
+        "brightness": 2,
+        "state": "OFF",
+        "update": {
+            "state": "idle"
+        },
+        "linkquality": 201,
+        "color": {
+            "x": 0.4599,
+            "y": 0.4106
+        },
+        "color_temp": 370
+    }
+}
