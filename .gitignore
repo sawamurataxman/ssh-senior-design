@@ -1,0 +1,9 @@
+#frontend
+
+#backend
+/backend/venv/
+#
+#zigbee2mqtt
+/zigbee2mqtt/data/*
+/zigbee2mqtt/zigbee2mqtt-data/*
+/zigbee2mqtt/mosquitto-data/*
