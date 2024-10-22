@@ -1,4 +1,9 @@
 /backend/venv/
+/backend/.flaskenv
+/backend/__pycache__/*
+
+/frontend/node_modules/*
+
 /zigbee2mqtt/data/*
 /zigbee2mqtt/zigbee2mqtt-data/*
 /zigbee2mqtt/mosquitto-data/*
