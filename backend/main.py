@@ -18,7 +18,7 @@ client.loop_start()
 while(True):
     for i in range(2):
         if i == 0:
-            result = client.publish("zigbee2mqtt/bulb1/set", '{"brightness":0}')
+            result = client.publish("zigbee2mqtt/bulb1/set", '{"color": {"r": 255, "g": 0, "b": 0}}')
         else:
             result = client.publish("zigbee2mqtt/bulb1/set", '{"brightness":10}')
         time.sleep(1)
