@@ -37,7 +37,7 @@ def echo():
 
 @app.route('/api/bulb1', methods=['POST'])
 def updateBulb1():
-    data = request.json
+    /data = request.json
     json_data = json.dumps(data)
     print(json_data)
     #result = client.publish("zigbee2mqtt/bulb1/set", json_data)
