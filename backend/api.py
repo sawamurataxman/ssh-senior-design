@@ -10,16 +10,16 @@ from datetime import datetime
 app = Flask(__name__)
 CORS(app)
 
-def on_publish(client, userdata, mid, reasonCode, properties):
-    print(f"Message {mid} has been published.")
+#def on_publish(client, userdata, mid, reasonCode, properties):
+#    print(f"Message {mid} has been published.")
 
-clientID = "mainNetwork"
-port = 1883
-broker = "localhost"
-client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2, clientID)
-client.on_publish = on_publish
-client.connect(broker, port)
-client.loop_start()
+#clientID = "mainNetwork"
+#port = 1883
+#broker = "localhost"
+#client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2, clientID)
+#client.on_publish = on_publish
+#client.connect(broker, port)
+#client.loop_start()
 
 @app.route('/api/time', methods=['GET'])#backend -> frontend (frontend GETs it from backend)
 def get_time():
