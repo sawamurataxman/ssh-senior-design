@@ -5,11 +5,11 @@ import './App.css';
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import BulbPage from './pages/BulbPage';
 import Navbar from './components/Navbar';
 
 import TimeDisplay from './TimeTest';
 import StringSender from './StringTest';
-import ColorTest from './colorTest';
 
 function App() {
   return (
@@ -18,16 +18,17 @@ function App() {
         <div>
           <Navbar />
           <Routes>
-            <Route path ="/" element={<Home />} />
-            <Route path ="/about" element={<About />} />
-            <Route path ="/contact" element={<Contact />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/bulb" element={<BulbPage />} />
           </Routes>
         </div>
       </Router>
       <br />
-      <StringSender />
+      {/*<StringSender />*/}
       <br />
-      <ColorTest />
+      {/*<TimeDisplay />*/}
     </div>
   );
 }
