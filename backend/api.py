@@ -37,22 +37,9 @@ def echo():
     
 @app.route('/api/smartbulb', methods=['POST'])
 def smartbulb():
-    global latest_data
-    if request.method == 'POST':
+    data = request.get_json()
+    return jsonify(data), 200
 
-        latest_data = request.get_json()
-        response = app.response_class(
-            response=json.dumps(latest_data),
-            status=200,
-            mimetype="text/plain"
-        )
-        return response
-    elif request.method == 'GET':
-        return app.response_class(
-            response=json.dumps(latest_data),
-            status=200,
-            mimetype = "text/plain"
-        )
 
 
 @app.route('/api/bulb1', methods=['POST'])
