@@ -34,6 +34,26 @@ def echo():
 
     print("received string: " + user_string)
     return( {"received": user_string} )
+    
+@app.route('/api/smartbulb', methods=['POST'])
+def smartbulb():
+    global latest_data
+    if request.method == 'POST':
+
+        latest_data = request.get_json()
+        response = app.response_class(
+            response=json.dumps(latest_data),
+            status=200,
+            mimetype="text/plain"
+        )
+        return response
+    elif request.method == 'GET':
+        return app.response_class(
+            response=json.dumps(latest_data),
+            status=200,
+            mimetype = "text/plain"
+        )
+
 
 @app.route('/api/bulb1', methods=['POST'])
 def updateBulb1():
