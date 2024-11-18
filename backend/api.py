@@ -34,11 +34,6 @@ def echo():
 
     print("received string: " + user_string)
     return( {"received": user_string} )
-    
-@app.route('/api/smartbulb', methods=['POST'])
-def smartbulb():
-    data = request.get_json()
-    return jsonify(data), 200
 
 
 

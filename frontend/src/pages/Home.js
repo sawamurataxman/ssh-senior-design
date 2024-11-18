@@ -4,7 +4,7 @@ import axios from 'axios';
 
 function Home()
 {
-    const [color, setColor] = useState({hex: '#fff'});
+    const [color, setColor] = useState({rgb: {r: 51, g: 51, b: 51, a: 1}});
     const [showColorPicker, setShowColorPicker] = useState(false);
     const [brightness, setBrightness] = useState(128);
 
@@ -13,11 +13,11 @@ function Home()
 
         const data ={
             brightness: parseInt(brightness, 10),
-            color: color.hex,
+            color: color.rgb,
             
         };
         try{
-            const response = await axios.post("http://localhost:5000/api/smartbulb", data);
+            const response = await axios.post("http://localhost:5000/api/bulb1", data);
             console.log("Response received:", response);
             alert(`Server Response: ${JSON.stringify(response.data)}`);
         }

@@ -27,7 +27,6 @@ function App() {
       <br />
       <StringSender />
       <br />
-      <ColorTest />
     </div>
   );
 }
