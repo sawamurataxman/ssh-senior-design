@@ -35,6 +35,8 @@ def echo():
     print("received string: " + user_string)
     return( {"received": user_string} )
 
+
+
 @app.route('/api/bulb1', methods=['POST'])
 def updateBulb1():
     data = request.json
