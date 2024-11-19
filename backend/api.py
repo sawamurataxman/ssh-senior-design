@@ -36,14 +36,25 @@ def echo():
     return( {"received": user_string} )
 
 
+# Simulated storage (can be replaced with a database)
+bulb_state = {
+    "brightness": 128,
+    "color": {"r": 51, "g": 51, "b": 51, "a": 1}
+}
 
 @app.route('/api/bulb1', methods=['POST'])
-def updateBulb1():
+def update_bulb():
+    global bulb_state
     data = request.json
     json_data = json.dumps(data)
     print(json_data)
-    #result = client.publish("zigbee2mqtt/bulb1/set", json_data)
-    return(json_data)
+    bulb_state["brightness"] = data.get("brightness", bulb_state["brightness"])
+    bulb_state["color"] = data.get("color", bulb_state["color"])
+    return {"status": "success", "message": json_data }, 200
+
+@app.route('/api/bulb1', methods=['GET'])
+def get_bulb_state():
+    return jsonify(bulb_state), 200
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
