@@ -1,38 +1,158 @@
+/* General App Styling */
+/* App.css */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .App {
-  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #1b2d3f;
+  /* Example background */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+/* Navbar container */
+nav {
+
+  padding: 10px 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Navbar list */
+nav ul {
+  list-style: none;
+  /* Remove default list styling */
+  display: flex;
+  /* Align items side by side */
+  margin: 0;
+  /* Remove default margin */
+  padding: 0;
+  /* Remove default padding */
+  justify-content: center;
+  /* Center the navbar items */
 }
 
+/* Navbar items */
+nav li {
+  margin: 0 15px;
+  /* Add horizontal spacing between items */
+}
+
+/* Links inside the navbar */
+nav a {
+  text-decoration: none;
+  /* Remove underline from links */
+  color: white;
+  /* Set text color */
+  background-color: #555;
+  /* Button-like background */
+  padding: 10px 20px;
+  /* Add padding to look like buttons */
+  border-radius: 5px;
+  /* Round the corners slightly */
+  transition: background-color 0.3s, transform 0.2s;
+  /* Smooth hover effects */
+}
+
+/* Hover effects for links */
+nav a:hover {
+  background-color: #61dafb;
+  /* Change background color on hover */
+  color: #333;
+  /* Optional: Change text color */
+  transform: scale(1.05);
+  /* Slightly enlarge the button */
+}
+
+
+/* Header Styling */
 .App-header {
-  background-color: #282c34;
+  background-color: #1e2a38;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(12px + 2vmin);
   color: white;
+  padding: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.App-link {
-  color: #61dafb;
+/* Styling for Home component */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  background-color: #999999;
+  opacity: 0.90;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 40px auto;
+  width: 100%;
+  max-width: 600px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.home-container h1 {
+  color: #333;
+  font-size: 2.5rem;
+}
+
+.home-container p {
+  color: #1b2d3f;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #4396ad;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #21a1f1;
+}
+
+/* Styling for ChromePicker */
+.react-color {
+  margin: 20px 0;
+  display: inline-block;
+}
+
+input[type="range"] {
+  width: 100%;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  background: #ddd;
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+
+
+/* Footer Styling */
+footer {
+  background-color: #1e2a38;
+  color: #bbb;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  margin-top: auto;
 }
